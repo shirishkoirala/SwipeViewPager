@@ -2,8 +2,9 @@ package com.haerul.swipeviewpager;
 
 import android.animation.ArgbEvaluator;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
-                if (position < (adapter.getCount() -1) && position < (colors.length - 1)) {
+                if (position < (adapter.getCount() - 1) && position < (colors.length - 1)) {
                     viewPager.setBackgroundColor(
 
                             (Integer) argbEvaluator.evaluate(
@@ -55,9 +56,7 @@ public class MainActivity extends AppCompatActivity {
                                     colors[position + 1]
                             )
                     );
-                }
-
-                else {
+                } else {
                     viewPager.setBackgroundColor(colors[colors.length - 1]);
                 }
             }

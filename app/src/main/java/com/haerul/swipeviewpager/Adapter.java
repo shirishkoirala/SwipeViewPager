@@ -2,13 +2,14 @@ package com.haerul.swipeviewpager;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.viewpager.widget.PagerAdapter;
 
 import java.util.List;
 
@@ -66,6 +67,6 @@ public class Adapter extends PagerAdapter {
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        container.removeView((View)object);
+        container.removeView((View) object);
     }
 }
